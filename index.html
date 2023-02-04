@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="m" type="text">
+    <input id="x" type="text">
+    <input id="c" type="text"><br><br>
+    <p id="y">kamal</p>
+    
+    <script>
+      const mInput = document.getElementById("m");
+      const xInput = document.getElementById("x");
+      const cInput = document.getElementById("c");
+      const yOutput = document.getElementById("y");
+    
+      mInput.addEventListener("input", calculate);
+      xInput.addEventListener("input", calculate);
+      cInput.addEventListener("input", calculate);
+    
+      function calculate() {
+        const m = Number(mInput.value);
+        const x = Number(xInput.value);
+        const c = Number(cInput.value);
+        yOutput.textContent = m * x + c;
+      }
+    </script>
+    
+</body>
+</html>
